@@ -8,10 +8,10 @@
 
 <style>
     body {
-        background-image: url('mob_pvz.jpg');
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-position: center;
+        background-size: cover;
     }
 </style>
 
@@ -19,5 +19,16 @@
     <h1>Wah Zebi</h1>
     <p>C'est moche.</p>
 </body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script type='text/javascript'>
+    var images = ['cadavre.jpg', 'melanie.tcheou.jpg', 'mob_pvz.jpg', 'monstre.jpg'];
+    var rand = images[Math.floor(Math.random() * images.length)];
+
+    $(document).ready(function () {
+        $("body").css("background-image", "url('" + rand + "')");
+    });
+</script>
 
 </html>
